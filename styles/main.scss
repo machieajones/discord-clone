@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&display=swap');
+
+:root {
+	--color-grey-dark: #202326;
+	--color-grey-channel: #2f3236;
+	--color-grey-line: #2c2e31;
+	--color-grey-light: #363a3e;
+	--color-grey-channelHover: #393d42;
+	--color-grey-text: #8e9296;
+	--color-green: #42b680;
+	--color-purple: #7288da;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans';
+	padding: 0;
+	margin: 0;
+}
+
+.discordApp {
+	height: 100vh;
+	display: flex;
+}
+
+.server {
+	background: var(--color-grey-dark);
+	height: 100%;
+	width: 72px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 12px;
+}
+
+.server--icon {
+	width: 50px;
+	height: 50px;
+	background: var(--color-grey-light);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	color: white;
+	position: relative;
+	&.active {
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 13px;
+			background: white;
+			height: 46px;
+			border-radius: 33px;
+			margin-left: -19px;
+		}
+	}
+	&:hover {
+		border-radius: 25%;
+		background: var(--color-green);
+	}
+}
+
+.server--seperator {
+	width: 30px;
+	height: 2px;
+	background: var(--color-grey-light);
+	margin-bottom: 10px;
+	border-radius: 2px;
+}
+
+.chatOuter {
+	background: #363a3e;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.channels {
+	background: var(--color-grey-channel);
+	width: 240px;
+	height: 100%;
+	color: var(--color-grey-text);
+	display: flex;
+	flex-direction: column;
+	nav {
+		color: white;
+		border-bottom: 2px solid #2c2e31;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px;
+		height: 58px;
+		h3 {
+			margin: 0;
+			font-size: 16px;
+		}
+	}
+}
+
+.channels--list {
+	padding: 15px 0;
+}
+
+.channels--list-header {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	margin-bottom: 5px;
+	padding: 0 10px;
+	align-items: center;
+	h4 {
+		font-size: 12px;
+		margin: 0;
+		text-transform: uppercase;
+		span {
+			padding: 0 5px;
+		}
+	}
+}
+
+.channels--list-content-item {
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	margin: 0 5px;
+	border-radius: 5px;
+	&:hover {
+		background: var(--color-grey-channelHover);
+		color: white;
+	}
+	span {
+		margin-right: 10px;
+	}
+	h5 {
+		font-size: 16px;
+		margin: 0;
+		font-weight: 500;
+	}
+}
+
+.channels--userArea {
+	background: #292c2f;
+	margin-top: auto;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.name {
+		display: flex;
+		// flex-direction: column;
+		.userIcon {
+			width: 35px;
+			height: 35px;
+			background: var(--color-purple);
+			color: white;
+			border-radius: 50%;
+			align-items: center;
+			justify-items: center;
+			text-align: center;
+			margin-right: 5px;
+		}
+		h4 {
+			margin: 10px 0 3px;
+			color: white;
+			line-height: 0;
+		}
+		.subText {
+			color: var(--color-grey-text);
+			font-size: 12px;
+		}
+	}
+	.icons {
+		margin-left: 0;
+		span {
+			padding: 10px;
+		}
+	}
+}
+
+.chat {
+	width: calc(100% - 240px);
+	background: #363a3e;
+	display: flex;
+	flex-direction: column;
+	nav {
+		color: white;
+		border-bottom: 2px solid #2c2e31;
+		display: flex;
+		justify-content: space-between;
+		height: 58px;
+		padding: 15px;
+		align-items: center;
+		.header {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			span {
+				font-size: 20px;
+				margin-right: 10px;
+			}
+			h2 {
+				margin: 0;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.chat--inner {
+	display: flex;
+	height: 100%;
+}
+
+.messages {
+	width: calc(100% - 240px);
+	display: flex;
+	flex-direction: column;
+	.messages--send {
+		margin-top: auto;
+		padding: 15px;
+		input {
+			width: 100%;
+			height: 40px;
+			background: #40454a;
+			border: 0;
+			border-radius: 10px;
+			padding: 10px;
+		}
+	}
+}
+
+.members {
+	width: 240px;
+	height: 100%;
+	padding: 15px;
+	background: var(--color-grey-channel);
+}
