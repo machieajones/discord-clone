@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400&display=swap");
+:root {
+  --color-grey-dark: #202326;
+  --color-grey-channel: #2f3236;
+  --color-grey-line: #2c2e31;
+  --color-grey-light: #363a3e;
+  --color-grey-channelHover: #393d42;
+  --color-grey-text: #8e9296;
+  --color-green: #42b680;
+  --color-purple: #7288da;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans";
+  padding: 0;
+  margin: 0;
+}
+
+.discordApp {
+  height: 100vh;
+  display: flex;
+}
+
+.server {
+  background: var(--color-grey-dark);
+  height: 100%;
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.server--icon {
+  width: 50px;
+  height: 50px;
+  background: var(--color-grey-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+.server--icon.active:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 13px;
+  background: white;
+  height: 46px;
+  border-radius: 33px;
+  margin-left: -19px;
+}
+.server--icon:hover {
+  border-radius: 25%;
+  background: var(--color-green);
+}
+
+.server--seperator {
+  width: 30px;
+  height: 2px;
+  background: var(--color-grey-light);
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.chatOuter {
+  background: #363a3e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.channels {
+  background: var(--color-grey-channel);
+  width: 240px;
+  height: 100%;
+  color: var(--color-grey-text);
+  display: flex;
+  flex-direction: column;
+}
+.channels nav {
+  color: white;
+  border-bottom: 2px solid #2c2e31;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  height: 58px;
+}
+.channels nav h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.channels--list {
+  padding: 15px 0;
+}
+
+.channels--list-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  align-items: center;
+}
+.channels--list-header h4 {
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.channels--list-header h4 span {
+  padding: 0 5px;
+}
+
+.channels--list-content-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.channels--list-content-item:hover {
+  background: var(--color-grey-channelHover);
+  color: white;
+}
+.channels--list-content-item span {
+  margin-right: 10px;
+}
+.channels--list-content-item h5 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.channels--userArea {
+  background: #292c2f;
+  margin-top: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.channels--userArea .name {
+  display: flex;
+}
+.channels--userArea .name .userIcon {
+  width: 35px;
+  height: 35px;
+  background: var(--color-purple);
+  color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin-right: 5px;
+}
+.channels--userArea .name h4 {
+  margin: 10px 0 3px;
+  color: white;
+  line-height: 0;
+}
+.channels--userArea .name .subText {
+  color: var(--color-grey-text);
+  font-size: 12px;
+}
+.channels--userArea .icons {
+  margin-left: 0;
+}
+.channels--userArea .icons span {
+  padding: 10px;
+}
+
+.chat {
+  width: calc(100% - 240px);
+  background: #363a3e;
+  display: flex;
+  flex-direction: column;
+}
+.chat nav {
+  color: white;
+  border-bottom: 2px solid #2c2e31;
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  padding: 15px;
+  align-items: center;
+}
+.chat nav .header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.chat nav .header span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.chat nav .header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.chat--inner {
+  display: flex;
+  height: 100%;
+}
+
+.messages {
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: column;
+}
+.messages .messages--send {
+  margin-top: auto;
+  padding: 15px;
+}
+.messages .messages--send input {
+  width: 100%;
+  height: 40px;
+  background: #40454a;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.members {
+  width: 240px;
+  height: 100%;
+  padding: 15px;
+  background: var(--color-grey-channel);
+}
+
+/*# sourceMappingURL=main.48b3db1d.css.map */
