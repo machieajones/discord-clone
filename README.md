@@ -1,4 +1,5 @@
-# youtube-ui
+# Discord UI clone
+A CSS mockup of the Discord interface.
 
 ## Preview
 
